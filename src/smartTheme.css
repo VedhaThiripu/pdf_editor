@@ -1,0 +1,144 @@
+body,
+html {
+    height: 100%;
+    overflow-x: hidden;
+    font-size: 12pt;
+    font-family: 'Arial';
+    background-color: #f7f9fb;
+    scroll-behavior: smooth;
+}
+
+label {
+    font-size: medium;
+    color: #02083b;
+}
+
+.smart-input {
+    margin-top: 10px;
+}
+
+.madatory-filed {
+    color: red;
+    text-align: left;
+}
+
+input {
+    background-color: #f5f8fa;
+    border-radius: 5px;
+    height: 32px;
+    outline: none;
+    /* text-transform: uppercase; */
+}
+
+.input-value {
+    background-color: #f5f8fa00;
+    border: none;
+    height: 32px;
+    outline: none;
+    width: 100%;
+    padding-left: 4px;
+    color: #5E6278 !important;
+    border-radius: 3px;
+    font-size: 14px;
+    border: solid #e3e3e3 1px;
+}
+
+.calendar {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+
+}
+
+.smart-btn {
+    background-color: rgb(39, 28, 115);
+    color: white;
+    padding: 5px 15px 5px 15px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    margin: 5px;
+}
+
+.smart-btn-outlet {
+    font-size: small;
+    border: solid rgb(39, 28, 115) 1px;
+    color: rgb(39, 28, 115);
+    padding: 5px 15px 5px 15px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.smart-btn-outlet :hover {
+    background-color: darkblue;
+    color: white;
+}
+
+.smart-icon {
+    padding: 5px;
+}
+
+.smart-dashboard-card {
+    border-radius: 25px;
+}
+
+/* Input type Number Spinner Remove */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.invalid {
+    border-bottom: solid red 2px !important;
+}
+
+.valid {
+    border-bottom: solid green 2px !important;
+}
+
+/* .disabled {
+    border-left: solid gray 2px !important;
+} */
+
+.untouched {
+    border-bottom: solid blue 2px !important;
+}
+
+.error-msg {
+    font-size: 12px;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00308F;
+    border-radius: 10px
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00308F;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(39, 28, 115);
+    height: auto;
+    width: auto;
+    color: #fff;
+    text-align: center;
+}

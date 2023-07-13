@@ -1,0 +1,13 @@
+<ng-template #alert let-modal let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h5 class="modal-title"  class="ft-popup-heading brand-text-color">{{header || ''}}</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="close()"></button>
+    </div>
+    <div class="modal-body">
+        <p> {{questions || ''}}</p>
+        <div class=" pull-right m-2">
+            <button class="btn btn-success m-2" (click)="onConfirmation('YES')" >Yes</button>
+            <button class="btn btn-primary" (click)="onConfirmation('NO')" >No</button>
+        </div>
+    </div>
+    </ng-template>

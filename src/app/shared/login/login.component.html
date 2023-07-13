@@ -1,0 +1,30 @@
+
+
+<div class="container">
+    <div class="row align-items-center vh-100">
+        <div class="col-6 mx-auto">
+            <div class="card login-card">
+                <div class="card-body d-flex flex-column align-items-center">
+                    <div class="smart-header">
+                            login
+                    </div>
+                    <form [formGroup]="loginForm" [autocomplete]="'off'">
+                        <hr>
+                            <div class="smart-input"> 
+                                <label>User Name<span smartMandatory></span></label>
+                                <input placeholder="User Name/Id" formControlName="userName" [autocomplete]="'off'" [smartErrorMessage]="loginFormControls.userName"  [smartSubmit]="isSubmitted" smartInputBorder  class="input-value"  type="text" />
+                            </div>
+                            <div class="smart-input"> 
+                                <label>Password<span smartMandatory></span></label>
+                                <input placeholder="password" formControlName="userPassword" [autocomplete]="'off'" maxlength="15" [smartErrorMessage]="loginFormControls.userPassword"  [smartSubmit]="isSubmitted" smartInputBorder  class="input-value"  type="password" />
+                            </div>
+                            <div class="text-center pt-4">
+                                <button type="submit" class="smart-btn" (click)="onLogin()">login</button>
+                            </div>
+                    </form>
+                    <hr/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

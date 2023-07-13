@@ -1,0 +1,22 @@
+<h3 class="smart-header mb-1 text-center mb-2">{{title | uppercase}}</h3>
+<div *ngIf="source!='REPORTS'">
+    <button class="btn btn-outline-primary" (click)="goBack()"><i class="fa fa-arrow-left  p-1"></i>Back</button>
+</div>
+<div>
+    <app-smart-form [smartFormConfig]="formConfig" (smartFormData)="getSmartFormData($event)"
+        (smartFormOnChange)="getSmartFormOnChange($event)"></app-smart-form>
+</div>
+<hr>
+<div class="row">
+    <div *ngFor="let carddata of cardConfig" class="col-auto">
+        <app-smart-dashboard-cards [color]="carddata?.color" [icon]="carddata?.icon" [title]="carddata?.title"
+            [data]="carddata?.data" (ViewMoreAction)="onViewMoreAction($event)"></app-smart-dashboard-cards>
+    </div>
+</div>
+
+<br>
+<div class="pt-4">
+    <app-smart-server-table [onChangeTrigger]="resetTable" [OnChange]="true" (bodyAction)="onbodyActionClick($event)"
+        (headerAction)="headerActionClick($event)" (pageChange)="getPageChange($event)"
+        [tconfig]="tableConfig"></app-smart-server-table>
+</div>

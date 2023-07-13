@@ -1,0 +1,26 @@
+<div *ngIf="!isLogDetailsEnable">
+    <h3 class="smart-header mb-1 text-center">LOG DETAILS</h3>
+    <div class="row">
+        <div class="col-6 smart-header">
+        </div>
+        <div class="col-6 d-flex flex-row-reverse">
+            <button class="btn btn-outline-primary" (click)="createNewLog()">CREATE LOG<i class="fa fa-file-pen p-1"></i></button>
+        </div>
+    </div>
+    <div class="pt-2">
+        <app-smart-table [onChangeTrigger]="resetTable"  [OnChange]="true" [data]="tableData" (bodyAction)="onbodyActionClick($event)" (headerAction)="headerActionClick($event)"
+        [tconfig]="tableConfig"></app-smart-table>
+    </div>
+</div>
+<ng-template #createlog let-c="close" let-d="dismiss"> 
+<div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" class="ft-popup-heading text-center brand-text-color">Create Log</h5>
+		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+</div>
+<div class="modal-body">
+<app-newlogform [source]="'LOG'" (AddLogActions)="getAddLogActions()"></app-newlogform>
+</div>
+</ng-template>
+
+<app-viewlogdetails [title]="'Log Details'" [source]="'VIEWDETAILS'" *ngIf="isLogDetailsEnable" [data]="childData"  (backAction)="isLogDetailsEnable =! isLogDetailsEnable"></app-viewlogdetails>
+<app-alert  [closeAlert]="alertModal" (alertActions)="toggleStatus($event)" [questions]="'Do you want to Delete the log ?'" [header]="'Log Delete'"></app-alert>
