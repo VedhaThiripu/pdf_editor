@@ -16,7 +16,7 @@ export class SidenavComponent implements OnInit {
 
   createSmartSideNav(){
     this.smartSideNav = [
-      // {title:"Upload Log",icon:"fa-solid fa-file-pen",navigateLink:"/add"},
+      {title:"Upload Log",icon:"fa-solid fa-file-pen",navigateLink:"/add"},
       // {title:"Cron Files",icon:"fa-solid fa-clock",navigateLink:"/cron"},
       // {title:"Cron Log Status",icon:"fa-solid fa-chart-simple",navigateLink:"/cronstatus"},
       // {title:"Reports",icon:"fa-solid fa-chart-pie",navigateLink:"/report"},
